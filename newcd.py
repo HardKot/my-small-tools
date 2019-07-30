@@ -18,8 +18,7 @@ def search(title):
     return suitable
 
 def upgratecd():
-    catalog = str(input('Введите название каталога: '))
-    #place = input(str('Введите адресс для поиска через пробел(можно пропутить)'))
+    catalog = str(input('Введите название каталога: ')
     if len(catalog) > 0:
         result = search(catalog)
     else:
@@ -35,10 +34,10 @@ def upgratecd():
         print('Найденно больше одного католога:')
         for i in range(lenresult):
             print(str(i) + ' - ' + result[i])
-#        inputnumber = int(input('Выберите нужный каталог: '))
-#        while inputnumber > lenresult:
-#            inputnumber = int(input('Выберите нужный каталог: '))
-        return result.pop(int(input('Выберите нужный каталог: ')))
+        inputnumber = int(input('Выберите нужный каталог: '))
+        while inputnumber > lenresult:
+            inputnumber = int(input('Выберите нужный каталог: '))
+        return result.pop(inputnumber)
 
 def executor():
     catalog = upgratecd()
